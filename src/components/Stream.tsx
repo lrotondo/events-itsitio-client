@@ -86,7 +86,7 @@ const Stream = ({ streamId, arenaChatName, live }: Props) => {
                             </Text>
                         )}
                     </VStack>
-                    {live && (
+                    {live && arenaChatName!="" && (
                         <Box
                             w={{ base: "full", md: "20rem" }}
                             rounded={10}
