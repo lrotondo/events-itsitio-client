@@ -28,6 +28,7 @@ const Navbar = ({ sponsors, isPast }: Props) => {
                 >
                     <NavbarItem label="Información" href={"#info"} />
                     <NavbarItem label="Oradores" href={"#speakers"} />
+                    <NavbarItem label="Moderadores" href={"#moderators"} />
                     {!isPast && (
                         <NavbarItem
                             label={"Inscripciones"}
