@@ -34,7 +34,7 @@ const Moderators = ({ moderators }: Props) => {
             >
                 Moderadores
             </Heading>
-            {moderators.length >= 5 || isMobile ? (
+            {moderators.length >= 6 || isMobile ? (
                 <ModeratorsCarousel moderators={moderators} />
             ) : (
                 <HStack

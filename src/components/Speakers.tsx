@@ -34,7 +34,7 @@ const Speakers = ({ speakers }: Props) => {
             >
                 Oradores
             </Heading>
-            {speakers.length >= 5 || isMobile ? (
+            {speakers.length >= 6 || isMobile ? (
                 <SpeakersCarousel speakers={speakers} />
             ) : (
                 <HStack

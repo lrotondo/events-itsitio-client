@@ -18,13 +18,16 @@ const ModeratorsCarousel = ({ moderators }: Props) => {
         draggable: true,
         slidesToScroll: 1,
     });
-
-    return (
-        <HStack w={"full"} justifyContent={"center"}>
+console.log("moderators", moderators.length);
+    return (   
+        <>
+        {
+            moderators.length > 0 &&
+            <HStack w={"full"} justifyContent={"center"}>
             <Hide below="md">
                 <IconButton
                     icon={<MdNavigateBefore size={30} />}
-                    aria-label={"Orador anterior"}
+                    aria-label={"Moderador anterior"}
                     onClick={() => embla?.scrollPrev()}
                     variant={"ghost"}
                     size={"lg"}
@@ -60,7 +63,7 @@ const ModeratorsCarousel = ({ moderators }: Props) => {
                 {moderators.length > 3 && (
                     <IconButton
                         icon={<MdNavigateNext size={30} />}
-                        aria-label={"Siguiente orador"}
+                        aria-label={"Siguiente Moderador"}
                         onClick={() => embla?.scrollNext()}
                         variant={"ghost"}
                         size={"lg"}
@@ -72,7 +75,9 @@ const ModeratorsCarousel = ({ moderators }: Props) => {
                 )}
             </Hide>
         </HStack>
-    );
+        }        
+        </>            
+        );     
 };
 
 export default ModeratorsCarousel;
